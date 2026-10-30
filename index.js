@@ -1,5 +1,5 @@
 let mensaje = document.getElementById("mensaje");
-let btn = document.getElementById("boton").addEventListener("touchstart",onClick);
+let btn = document.getElementById("boton").addEventListener("click",onClick);
 window.addEventListener('deviceorientation', manejarOrientacion);
 
 
@@ -12,6 +12,7 @@ function manejarOrientacion(event) {
 }
 
 function onClick() {
+    mensaje.innerHTML = "Lo que sea";
   if (typeof DeviceMotionEvent.requestPermission === 'function') {
     // Handle iOS 13+ devices.
     DeviceMotionEvent.requestPermission()
