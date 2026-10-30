@@ -1,5 +1,7 @@
 let mensaje = document.getElementById("mensaje");
+let btn = document.getElementById("boton").addEventListener("click",onClick);
 window.addEventListener('deviceorientation', manejarOrientacion);
+
 
 function manejarOrientacion(event) {
   const alpha = event.alpha;
