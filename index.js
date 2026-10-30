@@ -8,14 +8,14 @@ function manejarOrientacion(event) {
   const beta = event.beta;
   const gamma = event.gamma;
   
-    mensaje.innerHTML = "alpha: " + alpha.toFixed(2) + "beta: " + beta.toFixed(2) + "gamma: " + gamma.toFixed();
+    mensaje.innerHTML = "alpha: " + alpha.toFixed(2) + "beta: " + beta.toFixed(2) + "gamma: " + gamma.toFixed(2);
 }
 
 function onClick() {
     mensaje.innerHTML = "Lo que sea";
-  if (typeof DeviceMotionEvent.requestPermission === 'function') {
+  if (typeof DeviceOrientationEvent.requestPermission === 'function') {
     // Handle iOS 13+ devices.
-    DeviceMotionEvent.requestPermission()
+    DeviceOrientationEvent.requestPermission()
       .then((state) => {
         if (state === 'granted') {
           window.addEventListener('devicemotion', manejarOrientacion);
