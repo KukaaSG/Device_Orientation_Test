@@ -1,5 +1,5 @@
 let mensaje = document.getElementById("mensaje");
-let btn = document.getElementById("boton").addEventListener("click",onClick);
+let btn = document.getElementById("boton").addEventListener("touchstart",onClick);
 window.addEventListener('deviceorientation', manejarOrientacion);
 
 
